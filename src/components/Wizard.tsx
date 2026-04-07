@@ -57,7 +57,7 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
   const renderStep0 = () => (
     <div className="space-y-6 animate-fade-in">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">
+        <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-900 to-purple-600">
           The "AI Time Audit & ROI" Strategy
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -73,15 +73,15 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
           <h3 className="font-semibold text-lg mb-2">Inventory Tasks</h3>
           <p className="text-gray-600 text-sm">We walk through your typical week, mapping out routine tasks, their time cost, and business value.</p>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-pink-100">
-          <div className="h-12 w-12 bg-pink-100 rounded-lg flex items-center justify-center text-pink-600 mb-4">
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-purple-200">
+          <div className="h-12 w-12 bg-purple-200 rounded-lg flex items-center justify-center text-purple-700 mb-4">
             <span className="font-bold text-xl">2</span>
           </div>
           <h3 className="font-semibold text-lg mb-2">Identify Opportunities</h3>
           <p className="text-gray-600 text-sm">We assess the practical automation potential of each task using the latest AI tools and agents.</p>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-blue-100">
-          <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-purple-300">
+          <div className="h-12 w-12 bg-purple-300 rounded-lg flex items-center justify-center text-purple-800 mb-4">
             <span className="font-bold text-xl">3</span>
           </div>
           <h3 className="font-semibold text-lg mb-2">Project ROI</h3>
@@ -89,7 +89,7 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl mt-8">
+      <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-8 rounded-2xl mt-8">
         <h3 className="text-xl font-semibold mb-4 text-gray-800">Consultant & Professional Setup</h3>
         <div className="grid md:grid-cols-3 gap-4">
           <div>
@@ -191,7 +191,7 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
 
         <button 
           onClick={addTask}
-          className="flex items-center gap-2 text-purple-600 hover:text-purple-800 font-medium py-2 px-4 rounded-md border border-purple-200 hover:bg-purple-50 transition-colors"
+          className="flex items-center gap-2 text-purple-700 hover:text-purple-900 font-medium py-2 px-4 rounded-md border border-purple-300 hover:bg-purple-100 transition-colors"
         >
           <Plus size={18} /> Add Task
         </button>
@@ -239,7 +239,7 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
                 type="text" 
                 value={task.suggestedTools}
                 onChange={e => updateTask(task.id, 'suggestedTools', e.target.value)}
-                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:ring-pink-500 focus:border-pink-500"
+                className="w-full p-2 text-sm border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500"
               />
             </div>
           </div>
@@ -297,15 +297,15 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
             <div className="text-3xl font-bold mb-2">{roi.weekly.hours.toFixed(1)} hrs</div>
             <div className="text-xl text-purple-200">${roi.weekly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})}</div>
           </div>
-          <div className="bg-gradient-to-br from-pink-500 to-rose-600 p-6 rounded-2xl text-white shadow-md">
-            <h3 className="text-pink-100 font-medium mb-1">Monthly Savings</h3>
+          <div className="bg-gradient-to-br from-purple-600 to-purple-800 p-6 rounded-2xl text-white shadow-md">
+            <h3 className="text-purple-100 font-medium mb-1">Monthly Savings</h3>
             <div className="text-3xl font-bold mb-2">{roi.monthly.hours.toFixed(1)} hrs</div>
-            <div className="text-xl text-pink-200">${roi.monthly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})}</div>
+            <div className="text-xl text-purple-200">${roi.monthly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})}</div>
           </div>
-          <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-6 rounded-2xl text-white shadow-md">
-            <h3 className="text-blue-100 font-medium mb-1">Quarterly Savings</h3>
+          <div className="bg-gradient-to-br from-purple-800 to-purple-950 p-6 rounded-2xl text-white shadow-md">
+            <h3 className="text-purple-100 font-medium mb-1">Quarterly Savings</h3>
             <div className="text-3xl font-bold mb-2">{roi.quarterly.hours.toFixed(1)} hrs</div>
-            <div className="text-xl text-blue-200">${roi.quarterly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})}</div>
+            <div className="text-xl text-purple-200">${roi.quarterly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})}</div>
           </div>
         </div>
 
@@ -337,10 +337,10 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
                 </div>
               </div>
               <div className="w-1/2 flex flex-col items-center">
-                <div className="text-sm text-purple-500 mb-2 font-medium">With AI</div>
-                <div className="w-32 h-32 rounded-full border-8 border-purple-500 flex items-center justify-center relative">
-                  <span className="text-2xl font-bold text-purple-700">{(roi.totalHours - roi.savedHours).toFixed(1)}h</span>
-                  <div className="absolute -top-4 -right-4 bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-full shadow-sm">
+                <div className="text-sm text-purple-700 mb-2 font-medium">With AI</div>
+                <div className="w-32 h-32 rounded-full border-8 border-purple-700 flex items-center justify-center relative">
+                  <span className="text-2xl font-bold text-purple-900">{(roi.totalHours - roi.savedHours).toFixed(1)}h</span>
+                  <div className="absolute -top-4 -right-4 bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded-full shadow-sm">
                     -{roi.totalHours > 0 ? ((roi.savedHours / roi.totalHours) * 100).toFixed(0) : 0}%
                   </div>
                 </div>
@@ -374,8 +374,8 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
             By integrating targeted, human-centered AI tools into routine workflows, we project a recovery of 
             <strong className="text-purple-600"> {roi.weekly.hours.toFixed(1)} hours per week</strong>. 
             Valued at an hourly rate of ${state.profile.hourlyRate}, this represents an equivalent productivity gain of 
-            <strong className="text-pink-600"> ${roi.monthly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})} per month</strong> or 
-            <strong className="text-blue-600"> ${roi.quarterly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})} per quarter</strong>.
+            <strong className="text-purple-700"> ${roi.monthly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})} per month</strong> or 
+            <strong className="text-purple-900"> ${roi.quarterly.dollars.toLocaleString(undefined, {maximumFractionDigits:0})} per quarter</strong>.
           </p>
         </div>
 
@@ -405,7 +405,7 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
                         {task.automationPotential}%
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-purple-600 font-semibold">{saved.toFixed(1)}h/wk</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-purple-700 font-semibold">{saved.toFixed(1)}h/wk</td>
                     <td className="px-6 py-4 text-sm text-gray-500">{task.suggestedTools}</td>
                   </tr>
                 );
@@ -442,7 +442,7 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
         <div className="flex items-center justify-between relative">
           <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-gray-200 -z-10 rounded-full"></div>
           <div 
-            className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-purple-500 to-pink-500 -z-10 transition-all duration-300 rounded-full"
+            className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-purple-500 to-purple-900 -z-10 transition-all duration-300 rounded-full"
             style={{ width: `${(state.currentStep / (steps.length - 1)) * 100}%` }}
           ></div>
           
@@ -484,14 +484,14 @@ export default function Wizard({ state, setState }: { state: AppState, setState:
         {state.currentStep < steps.length - 1 ? (
           <button
             onClick={handleNext}
-            className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg shadow-md transition-all font-medium"
+            className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-900 hover:from-purple-700 hover:to-purple-950 text-white px-6 py-3 rounded-lg shadow-md transition-all font-medium"
           >
             Next Step <ArrowRight size={18} />
           </button>
         ) : (
           <button
             onClick={() => window.print()}
-            className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg shadow-md transition-all font-medium"
+            className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-900 hover:from-purple-700 hover:to-purple-950 text-white px-6 py-3 rounded-lg shadow-md transition-all font-medium"
           >
             <Download size={18} /> Export Report
           </button>
